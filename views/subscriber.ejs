@@ -1,0 +1,14 @@
+<%-include("header.ejs")%>
+
+<ul class="list-group">
+    <%if(result && result.length) {%>
+        <%for(var i= 0; i < result.length; i++) {%>
+            <li class="list-group-item"><strong>First Name: </strong><%=result[i].first_name%></li>
+            <li class="list-group-item"><strong>Last Name: </strong><%=result[i].last_name%></li>
+            <li class="list-group-item"><strong>Email: </strong><%=result[i].email%></li>
+        <%}%>
+    <%}%>
+  </ul>
+</body>
+
+</html>

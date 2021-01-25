@@ -1,0 +1,38 @@
+<%-include("header.ejs")%>
+    <h1 style="text-align: center;">Cassandra with Node.js</h1>
+    <h3 style="text-align: center;">Basic CRUD operations</h3>
+    <h4 class="float-right"><a href="/add">Add</a></h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Options</td>
+            </tr>
+        </thead>
+        <tbody>
+            <%if(result && result.length) {%>
+                <%for (var i=0; i < result.length; i++) {%>
+                    <tr>
+                        <td>
+                            <a href="subscribers/<%=result[i].id%>"><%=result[i].first_name%></a>
+                        </td>
+                        <td>
+                            <%=result[i].last_name%>
+                        </td>
+                        <td>
+                            <%=result[i].email%>
+                        </td>
+                        <td>
+                            <a href="/remove/<%=result[i].id%>?_method=DELETE"><button type="button" class="btn btn-danger">&times;</button></a>
+                            <a href="/edit/<%=result[i].id%>"><button type="button" class="btn btn-danger">&#9998;</button></a>
+                        </td>
+                    </tr>
+                <%}%>
+            <%}%>
+        </tbody>
+    </table>
+</body>
+
+</html>

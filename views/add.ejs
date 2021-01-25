@@ -1,0 +1,28 @@
+<%-include("header.ejs")%>
+    <h1 style="text-align: center;">Add</h1>
+    <%if(result && result.length) {%>
+        <form method="post" action="/edit/<%=result[0].id%>">
+            <%} else {%>
+                <form method="post" action="/addSubscriber">
+                    <%}%>
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter email"
+                                value="<%if(result && result.length) {%><%= result[0].email%><%}%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">First Name:</label>
+                            <input type="text" name="first_name" class="form-control" placeholder="Enter First name"
+                                value="<%if(result && result.length) {%><%= result[0].first_name%><%}%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Last Name:</label>
+                            <input type="text" name="last_name" class="form-control" placeholder="Enter Last name"
+                                value="<%if(result && result.length) {%><%= result[0].last_name%><%}%>">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                </body>
+
+                </html>
