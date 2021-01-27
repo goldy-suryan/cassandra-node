@@ -5,3 +5,6 @@
 ## To run the project
 - Dev mode: Open terminal and type `npm run dev`
 - Or run `npm start`
+
+## Command reference
+- Get reference to commands for [cassandra](https://docs.datastax.com/en/cql-oss/3.x/cql/cql_using/useAboutCQL.html)
